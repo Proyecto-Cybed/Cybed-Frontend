@@ -1,25 +1,22 @@
-<?php
-require_once "funciones.php";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
-	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
-	
+	<meta name="author" content="Sergey Pozhilov (GetTemplate.com)">
+
 	<title>Contact us - Progressus Bootstrap template</title>
 
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
-	
+
 	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
 	<!-- Custom styles for our template -->
-	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
+	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen">
 	<link rel="stylesheet" href="assets/css/main.css">
 
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -31,9 +28,9 @@ require_once "funciones.php";
 
 <body>
 	<!-- Fixed navbar -->
-<?php
-    nav();
-?>
+	<?php
+	require_once('templates/navbar.php')
+	?>
 
 	<header id="head" class="secondary"></header>
 
@@ -46,49 +43,49 @@ require_once "funciones.php";
 		</ol>
 
 		<div class="row">
-			
+
 			<!-- Article main content -->
 			<article class="col-sm-9 maincontent">
 				<header class="page-header">
 					<h1 class="page-title">Contact us</h1>
 				</header>
-				
+
 				<p>
 					We’d love to hear from you. Interested in working together? Fill out the form below with some info about your project and I will get back to you as soon as I can. Please allow a couple days for me to respond.
 				</p>
 				<br>
-					<form>
-						<div class="row">
-							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Name">
-							</div>
-							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Email">
-							</div>
-							<div class="col-sm-4">
-								<input class="form-control" type="text" placeholder="Phone">
-							</div>
+				<form>
+					<div class="row">
+						<div class="col-sm-4">
+							<input class="form-control" type="text" placeholder="Name">
 						</div>
-						<br>
-						<div class="row">
-							<div class="col-sm-12">
-								<textarea placeholder="Type your message here..." class="form-control" rows="9"></textarea>
-							</div>
+						<div class="col-sm-4">
+							<input class="form-control" type="text" placeholder="Email">
 						</div>
-						<br>
-						<div class="row">
-							<div class="col-sm-6">
-								<label class="checkbox"><input type="checkbox"> Sign up for newsletter</label>
-							</div>
-							<div class="col-sm-6 text-right">
-								<input class="btn btn-action" type="submit" value="Send message">
-							</div>
+						<div class="col-sm-4">
+							<input class="form-control" type="text" placeholder="Phone">
 						</div>
-					</form>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-sm-12">
+							<textarea placeholder="Type your message here..." class="form-control" rows="9"></textarea>
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-sm-6">
+							<label class="checkbox"><input type="checkbox"> Sign up for newsletter</label>
+						</div>
+						<div class="col-sm-6 text-right">
+							<input class="btn btn-action" type="submit" value="Send message">
+						</div>
+					</div>
+				</form>
 
 			</article>
 			<!-- /Article -->
-			
+
 			<!-- Sidebar -->
 			<aside class="col-sm-3 sidebar sidebar-right">
 
@@ -107,32 +104,22 @@ require_once "funciones.php";
 			<!-- /Sidebar -->
 
 		</div>
-	</div>	<!-- /container -->
-	
+	</div> <!-- /container -->
+
 	<section class="container-full top-space">
 		<div id="map"></div>
 	</section>
 
-<?php
-	footer();
+	<?php
+	require_once('templates/navbar.php');
+	require_once('templates/includeJsScripts.php');
+	?>	
 
-?>
-		
-
-
-
-
-	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<script src="assets/js/headroom.min.js"></script>
-	<script src="assets/js/jQuery.headroom.min.js"></script>
-	<script src="assets/js/template.js"></script>
-	
 	<!-- Google Maps -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=&amp;sensor=false&amp;extension=.js"></script> 
+	<script src="https://maps.googleapis.com/maps/api/js?key=&amp;sensor=false&amp;extension=.js"></script>
 	<script src="assets/js/google-map.js"></script>
-	
+
 
 </body>
+
 </html>

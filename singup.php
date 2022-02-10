@@ -1,8 +1,3 @@
-<?php
-require_once "funciones.php";
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +27,7 @@ require_once "funciones.php";
 
 <body>
 <?php
-    nav();
+    require_once('templates/navbar.php')
 ?>
 
 	<header id="head" class="secondary"></header>
@@ -111,21 +106,11 @@ require_once "funciones.php";
 	</div>	<!-- /container -->
 	
 
-<?php
-    footer ();
-?>
+	<?php
+	require_once('templates/navbar.php');
+	require_once('templates/includeJsScripts.php');
+	?>
 
 
-
-
-
-
-
-	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-	<script src="assets/js/headroom.min.js"></script>
-	<script src="assets/js/jQuery.headroom.min.js"></script>
-	<script src="assets/js/template.js"></script>
 </body>
 </html>

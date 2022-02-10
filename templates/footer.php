@@ -1,40 +1,9 @@
-<?php
-
-function nav(){
-?>
-<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-		<div class="container">
-			<div class="navbar-header">
-				<!-- Button for smallest screens -->
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href="index.php"><img src="assets/images/proteger.png" width="10%" alt="Progressus HTML5 template"></a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li class="active"><a href="index.php">Inicio</a></li>
-					<li><a href="vulnerabilidades.php">Vulnerabilidades</a></li>
-					<li><a href="foro.php">Foro</a></li>
-					<li><a class="btn" href="IniciarSesion.php"> Iniciar Sesión / Inscribirse</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</div> 
-	<!-- /.navbar -->
-
-
-<?php
-}
-
-
-function footer (){
-
-?>
-    <footer id="footer" class="top-space">
+<footer id="footer" class="top-space">
 
     <div class="footer1">
         <div class="container">
             <div class="row">
-                
+
                 <div class="col-md-3 widget">
                     <h3 class="widget-title">Contacto</h3>
                     <div class="widget-body">
@@ -43,7 +12,7 @@ function footer (){
                             <br>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda perspiciatis maxime reiciendis tempora perferendis illum est veritatis, quam aliquam minus et quis consequuntur aperiam eum dolores voluptas provident voluptates sint.
                             <5></5>
-                        </p>	
+                        </p>
                     </div>
                 </div>
 
@@ -55,7 +24,7 @@ function footer (){
                             <a href=""><i class="fa fa-dribbble fa-2"></i></a>
                             <a href=""><i class="fa fa-github fa-2"></i></a>
                             <a href=""><i class="fa fa-facebook fa-2"></i></a>
-                        </p>	
+                        </p>
                     </div>
                 </div>
 
@@ -74,11 +43,11 @@ function footer (){
     <div class="footer2">
         <div class="container">
             <div class="row">
-                
+
                 <div class="col-md-6 widget">
                     <div class="widget-body">
                         <p class="simplenav">
-                            <a href="index.php">Inicio</a> | 
+                            <a href="index.php">Inicio</a> |
                             <a href="vulnerabilidades.php">Vulnerabilidades</a> |
                             <a href="foro.php">Foro</a> |
                             <a href="contact.php">Contacto</a> |
@@ -90,7 +59,7 @@ function footer (){
                 <div class="col-md-6 widget">
                     <div class="widget-body">
                         <p class="text-right">
-                            Copyright &copy; 2022, Your name. Designed by <a href="http://gettemplate.com/" rel="designer">gettemplate</a> 
+                            Copyright &copy; 2022, Your name. Designed by <a href="http://gettemplate.com/" rel="designer">gettemplate</a>
                         </p>
                     </div>
                 </div>
@@ -99,8 +68,4 @@ function footer (){
         </div>
     </div>
 
-</footer>	
-<?php
-}
-
-?>
+</footer>

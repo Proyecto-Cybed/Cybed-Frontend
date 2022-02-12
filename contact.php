@@ -111,7 +111,7 @@
 	</section>
 
 	<?php
-	require_once('templates/navbar.php');
+	require_once('templates/footer.php');
 	require_once('templates/includeJsScripts.php');
 	?>	
 

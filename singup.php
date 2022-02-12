@@ -1,116 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
-	
-	<title>Sign up - Progressus Bootstrap template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Sergey Pozhilov (GetTemplate.com)">
 
-	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
-	
-	<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <title>Cybed - Registrarse</title>
 
-	<!-- Custom styles for our template -->
-	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
-	<link rel="stylesheet" href="assets/css/main.css">
+    <link rel="shortcut icon" href="assets/images/gt_favicon.png">
 
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
+    <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <!-- Custom styles for our template -->
+    <link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
 	<script src="assets/js/html5shiv.js"></script>
 	<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
 </head>
 
 <body>
-<?php
+    <?php
     require_once('templates/navbar.php')
-?>
+    ?>
 
-	<header id="head" class="secondary"></header>
+    <header id="head" class="secondary"></header>
 
-	<!-- container -->
-	<div class="container">
+    <!-- container -->
+    <div class="container">
 
-		<ol class="breadcrumb">
-			<li><a href="index.html">Home</a></li>
-			<li class="active">Registration</li>
-		</ol>
+        <ol class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li class="active">Registration</li>
+        </ol>
 
-		<div class="row">
-			
-			<!-- Article main content -->
-			<article class="col-xs-12 maincontent">
-				<header class="page-header">
-					<h1 class="page-title">Registration</h1>
-				</header>
-				
-				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<h3 class="thin text-center">Register a new account</h3>
-							<p class="text-center text-muted">Lorem ipsum dolor sit amet, <a href="signin.html">Login</a> adipisicing elit. Quo nulla quibusdam cum doloremque incidunt nemo sunt a tenetur omnis odio. </p>
-							<hr>
+        <div class="row">
 
-							<form>
-								<div class="top-margin">
-									<label>First Name</label>
-									<input type="text" class="form-control">
-								</div>
-								<div class="top-margin">
-									<label>Last Name</label>
-									<input type="text" class="form-control">
-								</div>
-								<div class="top-margin">
-									<label>Email Address <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
-								</div>
+            <!-- Article main content -->
+            <article class="col-xs-12 maincontent">
+                <header class="page-header">
+                    <h1 class="page-title">Registro</h1>
+                </header>
 
-								<div class="row top-margin">
-									<div class="col-sm-6">
-										<label>Password <span class="text-danger">*</span></label>
-										<input type="text" class="form-control">
-									</div>
-									<div class="col-sm-6">
-										<label>Confirm Password <span class="text-danger">*</span></label>
-										<input type="text" class="form-control">
-									</div>
-								</div>
+                <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h3 class="thin text-center">Registrar una nueva cuenta</h3>
+                            <p class="text-center text-muted">Si por el contrario ya tienen una cuenta, acuda a  <a href="login.php">Iniciar Sesión</a></p>
+                            <hr>
 
-								<hr>
+                            <form>
+                                <div class="top-margin">
+                                    <label>Nombre de usuario <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="top-margin">
+                                    <label>Nombre</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="top-margin">
+                                    <label>Apellido</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="top-margin">
+                                    <label>Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control">
+                                </div>
+                                <div class="row top-margin">
+                                    <div class="col-sm-6">
+                                        <label>Contraseña <span class="text-danger">*</span></label>
+                                        <input type="password" class="form-control">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Confirmar Contraseña <span class="text-danger">*</span></label>
+                                        <input type="password" class="form-control">
+                                    </div>
+                                </div>
 
-								<div class="row">
-									<div class="col-lg-8">
-										<label class="checkbox">
-											<input type="checkbox"> 
-											I've read the <a href="page_terms.html">Terms and Conditions</a>
-										</label>                        
-									</div>
-									<div class="col-lg-4 text-right">
-										<button class="btn btn-action" type="submit">Register</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
+                                <hr>
 
-				</div>
-				
-			</article>
-			<!-- /Article -->
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <label class="checkbox">
+                                            <input type="checkbox">
+                                            He leído los términos y condiciones <a href="page_terms.html">Términos y condiciones</a>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-4 text-right">
+                                        <button class="btn btn-action" type="submit">Registrarse</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
 
-		</div>
-	</div>	<!-- /container -->
-	
+                </div>
 
-	<?php
-	require_once('templates/navbar.php');
-	require_once('templates/includeJsScripts.php');
-	?>
+            </article>
+            <!-- /Article -->
+
+        </div>
+    </div> <!-- /container -->
 
 
+    <?php
+    require_once('templates/footer.php');
+    require_once('templates/includeJsScripts.php');
+    ?>
 </body>
+
 </html>

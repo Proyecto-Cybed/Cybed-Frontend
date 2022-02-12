@@ -48,10 +48,10 @@
                     <div class="widget-body">
                         <p class="simplenav">
                             <a href="index.php">Inicio</a> |
-                            <a href="vulnerabilidades.php">Vulnerabilidades</a> |
-                            <a href="foro.php">Foro</a> |
+                            <a href="cve.php">Vulnerabilidades</a> |
+                            <a href="forum.php">Foro</a> |
                             <a href="contact.php">Contacto</a> |
-                            <b><a href="registro.ph">Inscribirse</a></b>
+                            <b><a href="singup.php">Inscribirse</a></b>
                         </p>
                     </div>
                 </div>

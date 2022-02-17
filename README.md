@@ -24,3 +24,7 @@
 - [ ] __RAy__: 
 - [ ] __RAz__:  
 
+### Participantes
+- Juan Antonio González Rivera ► [Deg42](https://github.com/Deg42)
+- Juan Miguel Costa Lucena ► [JuanmiCLucena](https://github.com/JuanmiCLucena)
+- Rafael Bermudo Villaécija ► [rafaelbv95](https://github.com/rafaelbv95)

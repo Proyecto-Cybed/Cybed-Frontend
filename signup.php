@@ -53,11 +53,11 @@
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <h3 class="thin text-center">Registrar una nueva cuenta</h3>
-                            <p class="text-center text-muted">Si por el contrario ya tienen una cuenta, acuda a  <a href="login.php">Iniciar Sesión</a></p>
+                            <p class="text-center text-muted">Si por el contrario ya tienen una cuenta, acuda a <a href="login.php">Iniciar Sesión</a></p>
                             <hr>
 
                             <form>
-                            <div class="top-margin">
+                                <div class="top-margin">
                                     <label>Nombre de usuario <span class="text-danger">*</span></label>
                                     <input type="text" class="form-control" id="usuario">
                                 </div>
@@ -94,7 +94,7 @@
                                         </label>
                                     </div>
                                     <div class="col-lg-4 text-right">
-                                    <a class="btn btn-primary" href="javascript:insertarUsuario();" role="button">Registrarse</a>
+                                        <a class="btn btn-primary" href="javascript:insertarUsuario();" role="button">Registrarse</a>
                                     </div>
                                 </div>
                             </form>
@@ -115,51 +115,6 @@
     require_once('templates/includeJsScripts.php');
     ?>
 
-<script>
-       
-       function insertarUsuario() {
-          
-           var usuario = new FormData();
-           
-
-           var contrasenya1 =  document.getElementById("contrasenya1").value;
-           var contrasenya2 =  document.getElementById("contrasenya2").value;
-
-           if (contrasenya1 === contrasenya2 ) {
-
-           usuario.append("nombre", document.getElementById("nombre").value);
-           usuario.append("usuario", document.getElementById("usuario").value);
-           usuario.append("apellidos", document.getElementById("usuario").value);
-           usuario.append("email", document.getElementById("usuario").value);
-           usuario.append("password", contrasenya1);  
-           
-         
-          
-           fetch("http://localhost:8000/api/usuarios/", {
-          
-
-               method: "POST", // Indicar método POST
-
-               body: usuario,// Con cuerpo
-              
-               })
-           .then((result) => {
-               if (result.status != 200) { throw new Error("Bad Server Response"); }
-               return result.text();
-           })
-           
-           // (D) SERVER RESPONSE
-           .then((response) => {
-               console.log(response);
-           })
-           
-           // (E) HANDLE ERRORS - OPTIONAL
-           .catch((error) => { console.log(error); });
-
-       }
-   }
-      
-   </script>
 </body>
 
 </html>

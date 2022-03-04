@@ -57,30 +57,30 @@
                             <hr>
 
                             <form>
-                                <div class="top-margin">
+                            <div class="top-margin">
                                     <label>Nombre de usuario <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" id="usuario">
                                 </div>
                                 <div class="top-margin">
                                     <label>Nombre</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" id="nombre">
                                 </div>
                                 <div class="top-margin">
                                     <label>Apellido</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" id="apellido">
                                 </div>
                                 <div class="top-margin">
                                     <label>Email <span class="text-danger">*</span></label>
-                                    <input type="email" class="form-control">
+                                    <input type="email" class="form-control" id="email">
                                 </div>
                                 <div class="row top-margin">
                                     <div class="col-sm-6">
                                         <label>Contraseña <span class="text-danger">*</span></label>
-                                        <input type="password" class="form-control">
+                                        <input type="password" class="form-control" id="contrasenya1">
                                     </div>
                                     <div class="col-sm-6">
                                         <label>Confirmar Contraseña <span class="text-danger">*</span></label>
-                                        <input type="password" class="form-control">
+                                        <input type="password" class="form-control" id="contrasenya2">
                                     </div>
                                 </div>
 
@@ -94,7 +94,7 @@
                                         </label>
                                     </div>
                                     <div class="col-lg-4 text-right">
-                                        <button class="btn btn-action" type="submit">Registrarse</button>
+                                    <a class="btn btn-primary" href="javascript:insertarUsuario();" role="button">Registrarse</a>
                                     </div>
                                 </div>
                             </form>
@@ -114,6 +114,52 @@
     require_once('templates/footer.php');
     require_once('templates/includeJsScripts.php');
     ?>
+
+<script>
+       
+       function insertarUsuario() {
+          
+           var usuario = new FormData();
+           
+
+           var contrasenya1 =  document.getElementById("contrasenya1").value;
+           var contrasenya2 =  document.getElementById("contrasenya2").value;
+
+           if (contrasenya1 === contrasenya2 ) {
+
+           usuario.append("nombre", document.getElementById("nombre").value);
+           usuario.append("usuario", document.getElementById("usuario").value);
+           usuario.append("apellidos", document.getElementById("usuario").value);
+           usuario.append("email", document.getElementById("usuario").value);
+           usuario.append("password", contrasenya1);  
+           
+         
+          
+           fetch("http://localhost:8000/api/usuarios/", {
+          
+
+               method: "POST", // Indicar método POST
+
+               body: usuario,// Con cuerpo
+              
+               })
+           .then((result) => {
+               if (result.status != 200) { throw new Error("Bad Server Response"); }
+               return result.text();
+           })
+           
+           // (D) SERVER RESPONSE
+           .then((response) => {
+               console.log(response);
+           })
+           
+           // (E) HANDLE ERRORS - OPTIONAL
+           .catch((error) => { console.log(error); });
+
+       }
+   }
+      
+   </script>
 </body>
 
 </html>

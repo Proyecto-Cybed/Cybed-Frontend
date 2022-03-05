@@ -116,5 +116,5 @@
     ?>
 
 </body>
-
+<script src="assets/js/loadCve.js"></script>
 </html>

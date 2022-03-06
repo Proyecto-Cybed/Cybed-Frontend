@@ -2,15 +2,16 @@
 
 ## Requisitos Desarrollo en Entorno Servidor
 
-- [ ] __RA5__: objeto form, objetos relacionados con eventos, eventos, envíos y validación de formularios, etc.
-- [ ] __RA6__: modelo de objetos DOM: objetos, acceso, gestión de eventos.
-- [ ] __RA7__: AJAX: envío y recepción de datos de forma asíncrona.
+- [X] __RA5__: Implementado con Symfony
+- [ ] __RA7__: API REST que permita hacer CRUD de alguna entidad (usuarios, noticias...)
+- [ ] __RA8__: Uso de AJAX
+- [ ] __RA9__: Uso de servivio externo (Google, APIs externas, Twitter...)
 
 ## Requisitos Desarrollo en el Entorno Cliente
 
 - [ ] __RA5__: Objeto form, objetos relacionados con eventos, eventos, envíos y validación de formularios..etc. No tenéis que tocar todas las partes sino trabajar algún aspecto relacionado con formularios, eventos, validación... Por ejemplo formularios de contacto, formularios de alta y cosas de este tipo 
-- [ ] __RA6__: Modelo de objetos DOM: objetos, acceso (esto ya lo hemos usado en clase), gestión de eventos (algunos/as ya lo han usado)
-- [ ] __RA7__: AJAX: envío y recepción de datos de forma asíncrona.
+- [X] __RA6__: Modelo de objetos DOM: objetos, acceso (esto ya lo hemos usado en clase), gestión de eventos (algunos/as ya lo han usado)
+- [X] __RA7__: AJAX: envío y recepción de datos de forma asíncrona.
 
 ## Requisitos Despliegue de Aplicaciones Web
 
@@ -24,7 +25,6 @@
 - [ ] __RA2__: Análisis del entorno de una actividad. (Fase II Del proyecto de empresa)
 - [ ] __RA3__: Puesta en marcha de una empresa. Determinación del mercado, elementos de marketing, forma jurídica y obligaciones legales (Fase lV y V del plan de empresa) 
 - [ ] __RA4__: Gestión administrativa y económica-financiera (fase VI del proyecto de empresa). 
-
 
 ### Participantes
 - Juan Antonio González Rivera ► [Deg42](https://github.com/Deg42)

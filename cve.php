@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="Sergey Pozhilov (GetTemplate.com)">
 
-	<title>About - Progressus Bootstrap template</title>
+	<title>Vulnerabilidades - Cybed</title>
 
 	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
 
@@ -37,8 +37,8 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="index.html">Home</a></li>
-			<li class="active">About</li>
+			<li><a href="index.php">Inicio</a></li>
+			<li class="active">Vulnerabilidades</li>
 		</ol>
 
 		<div class="row">
@@ -46,8 +46,9 @@
 			<!-- Article main content -->
 			<article class="col-sm-8 maincontent">
 				<header class="page-header">
-					<h1 class="page-title">About us</h1>
+					<h1 class="page-title">Vulnerabilidades y Exposiciones Comunes (CVE)</h1>
 				</header>
+			
 				<div id="cve"></div>
 			</article>
 			<!-- /Article -->
@@ -79,4 +80,5 @@
 
 </body>
 <script src="assets/js/loadCve.js"></script>
+
 </html>

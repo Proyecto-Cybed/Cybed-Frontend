@@ -1,3 +1,7 @@
+<?php
+$activePage = basename($_SERVER['PHP_SELF'], ".php");
+?>
+
 <div class="navbar navbar-inverse navbar-fixed-top headroom">
 	<div class="container">
 		<div class="navbar-header">
@@ -7,10 +11,10 @@
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav pull-right">
-				<li class="active"><a href="index.php">Inicio</a></li>
-				<li><a href="cve.php">Vulnerabilidades</a></li>
-				<li><a href="forum.php">Foro</a></li>
-				<li><a class="btn" href="login.php"> Iniciar Sesión / Inscribirse</a></li>
+				<li class="<?= ($activePage == 'index') ? 'active':''; ?>"><a href="index.php">Inicio</a></li>
+				<li class="<?= ($activePage == 'cve') ? 'active':''; ?>"><a href="cve.php">Vulnerabilidades</a></li>
+				<li class="<?= ($activePage == 'forum') ? 'active':''; ?>"><a href="forum.php">Foro</a></li>
+				<li class="<?= ($activePage == 'login') ? 'active':''; ?>"><a class="btn" href="login.php"> Iniciar Sesión / Inscribirse</a></li>
 			</ul>
 		</div>
 		<!--/.nav-collapse -->

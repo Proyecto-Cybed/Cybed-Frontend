@@ -18,6 +18,7 @@
     <!-- Custom styles for our template -->
     <link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen">
     <link rel="stylesheet" href="assets/css/main.css">
+    
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -48,6 +49,9 @@
                 <header class="page-header">
                     <h1 class="page-title">Registro</h1>
                 </header>
+                <div id="usuarioInsertado">
+
+                </div>
 
                 <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
                     <div class="panel panel-default">
@@ -56,47 +60,61 @@
                             <p class="text-center text-muted">Si por el contrario ya tienen una cuenta, acuda a <a href="login.php">Iniciar Sesión</a></p>
                             <hr>
 
-                            <form>
-                                <div class="top-margin">
-                                    <label>Nombre de usuario <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="usuario">
+                            <form role="form" id="register-form"> 
+
+                            <div class="form-body">
+                                <div class="form-group top-margin">
+                                        <label for="validacionNombreUsuario" class="form-label">Nombre de usuario <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="usuario" name="usuario">
+                                        <span class="help-block" id="error"></span>
                                 </div>
-                                <div class="top-margin">
-                                    <label>Nombre</label>
-                                    <input type="text" class="form-control" id="nombre">
+                                <div class="form-group top-margin">
+                                    <label for="validacionNombre" class="form-label">Nombre <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre">
+                                    <span class="help-block" id="error"></span>
                                 </div>
-                                <div class="top-margin">
-                                    <label>Apellido</label>
-                                    <input type="text" class="form-control" id="apellido">
+                                <div class="form-group top-margin">
+                                    <label>Apellidos <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="apellidos" name="apellidos"> 
+                                    <span class="help-block" id="error"></span>
                                 </div>
-                                <div class="top-margin">
-                                    <label>Email <span class="text-danger">*</span></label>
-                                    <input type="email" class="form-control" id="email">
+                                <div class="form-group top-margin">
+                                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" id="email" name="email">
+                                    <span class="help-block" id="error"></span>
                                 </div>
-                                <div class="row top-margin">
+                                <div class="form-group row top-margin">
                                     <div class="col-sm-6">
                                         <label>Contraseña <span class="text-danger">*</span></label>
-                                        <input type="password" class="form-control" id="contrasenya1">
+                                        <input type="password" class="form-control" id="contrasenya1" name="contrasenya1">
+                                        <span class="help-block" id="error"></span>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="form-group col-sm-6">
                                         <label>Confirmar Contraseña <span class="text-danger">*</span></label>
-                                        <input type="password" class="form-control" id="contrasenya2">
+                                        <input type="password" class="form-control" id="contrasenya2" name="contrasenya2">
+                                        <span class="help-block" id="error"></span>
                                     </div>
                                 </div>
 
                                 <hr>
 
-                                <div class="row">
+                                <div class="form-group row">
                                     <div class="col-lg-8">
                                         <label class="checkbox">
-                                            <input type="checkbox">
+                                            <input type="checkbox" name="check">
                                             He leído los términos y condiciones <a href="page_terms.html">Términos y condiciones</a>
                                         </label>
-                                    </div>
-                                    <div class="col-lg-4 text-right">
-                                        <a class="btn btn-primary" href="javascript:insertarUsuario();" role="button">Registrarse</a>
+                                        <span class="help-block" id="error"></span>
                                     </div>
                                 </div>
+
+                            </div> 
+                            <div class="form-footer">
+                                <div class="col-lg-4 text-right">
+                                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                                </div>
+                            </div>
+ 
                             </form>
                         </div>
                     </div>
@@ -109,6 +127,10 @@
         </div>
     </div> <!-- /container -->
 
+    <script src="assets/js/jquery-3.3.1.min.js" ></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+ 
 
     <?php
     require_once('templates/footer.php');

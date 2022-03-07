@@ -4,8 +4,8 @@
 
 - [X] __RA5__: Implementado con Symfony
 - [ ] __RA7__: API REST que permita hacer CRUD de alguna entidad (usuarios, noticias...)
-- [ ] __RA8__: Uso de AJAX
-- [ ] __RA9__: Uso de servivio externo (Google, APIs externas, Twitter...)
+- [X] __RA8__: Uso de AJAX
+- [X] __RA9__: Uso de servivio externo (Google, APIs externas, Twitter...)
 
 ## Requisitos Desarrollo en el Entorno Cliente
 

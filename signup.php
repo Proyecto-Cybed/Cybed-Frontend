@@ -138,5 +138,5 @@
     ?>
 
 </body>
-
+<script src="assets/js/users.js"></script>
 </html>

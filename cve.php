@@ -31,8 +31,6 @@
 	require_once('templates/navbar.php')
 	?>
 
-	<header id="head" class="secondary"></header>
-
 	<!-- container -->
 	<div class="container">
 

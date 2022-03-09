@@ -2,6 +2,7 @@
 $activePage = basename($_SERVER['PHP_SELF'], ".php");
 ?>
 
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<div class="container-fluid">
 		<a class="navbar-brand fs-1 fw-bold" href="index.php">
@@ -21,7 +22,4 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
 		</div>
 	</div>
 </nav>
-
-
-
-<!-- /.navbar -->
+<!-- /Navbar -->

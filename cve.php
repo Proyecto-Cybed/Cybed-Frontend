@@ -31,30 +31,30 @@
 	require_once('templates/navbar.php')
 	?>
 
-	<header id="head" class="secondary"></header>
-
 	<!-- container -->
 	<div class="container">
 
-		<ol class="breadcrumb">
-			<li><a href="index.php">Inicio</a></li>
-			<li class="active">Vulnerabilidades</li>
-		</ol>
+		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+				<li class="breadcrumb-item active">Vulnerabilidades</li>
+			</ol>
+		</nav>
 
 		<div class="row">
 
 			<!-- Article main content -->
-			<article class="col-sm-8 maincontent">
+			<article class="col-sm-10">
 				<header class="page-header">
 					<h1 class="page-title">Vulnerabilidades y Exposiciones Comunes (CVE)</h1>
 				</header>
-			
+
 				<div id="cve"></div>
 			</article>
 			<!-- /Article -->
 
 			<!-- Sidebar -->
-			<aside class="col-sm-4 sidebar sidebar-right">
+			<aside class="col-sm-2 sidebar sidebar-right">
 
 				<div class="widget">
 					<h4>Vacancies</h4>

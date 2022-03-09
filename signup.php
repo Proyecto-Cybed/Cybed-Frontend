@@ -32,15 +32,15 @@
     require_once('templates/navbar.php')
     ?>
 
-    <header id="head" class="secondary"></header>
-
     <!-- container -->
     <div class="container">
 
-        <ol class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li class="active">Registration</li>
-        </ol>
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+				<li class="breadcrumb-item active">Registrarse</li>
+			</ol>
+		</nav>
 
         <div class="row">
 

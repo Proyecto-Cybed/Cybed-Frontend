@@ -1,5 +1,13 @@
 $(document).ready(
   $(function () {
+    
+    const options = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    };
+
     $.ajax({
       type: "GET",
       dataType: "json",
@@ -10,17 +18,31 @@ $(document).ready(
         for (let i = 0; i < json.length; i++) {
           const cve = json[i];
 
+          const publishedDate = new Date(cve["publishedDate"]);
+          let stringPublishedDate = publishedDate.toLocaleDateString(
+            "es-ES",
+            options
+          );
+
           $("#cve").append(
-            '<div class="panel panel-primary">' +
-              '<div class="panel-heading"><h4>' +
+            '<div class="card border-primary mt-4">' +
+              '<div class="card-header"><h4>' +
               cve["cve"]["CVE_data_meta"]["ID"] +
               "</h4></div>" +
-              '<div class="panel-body">' +
+              '<div class="card-body">' +
+              '<p class="card-text">' +
               cve["cve"]["description"]["description_data"]["0"]["value"] +
-              "	</div>" +
-              '<div class="panel-footer"><p>' +
-              cve["publishedDate"] +
-              "</p>" +'<a  href="https://cve.mitre.org/cgi-bin/cvename.cgi?name='+cve["cve"]["CVE_data_meta"]["ID"] +'" class="btn btn-primary">&#10010; Info</a>'+
+              "</p>" +
+              '<p class="card-text">' +
+              '<small class="text-muted">' +
+              stringPublishedDate +
+              "</small>" +
+              "</p>" +
+              "</div>" +
+              '<div class="card-footer">' +
+              '<a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=' +
+              cve["cve"]["CVE_data_meta"]["ID"] +
+              '" class="btn btn-primary float-end">&#10010; Info</a>' +
               "</div>" +
               "</div>"
           );

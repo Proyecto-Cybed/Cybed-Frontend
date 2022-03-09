@@ -11,7 +11,7 @@
 
     <link rel="shortcut icon" href="assets/images/gt_favicon.png">
 
-    <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
 
@@ -165,10 +165,9 @@ require_once('templates/navbar.php')
 
 
 <?php
-	require_once('templates/navbar.php');
+	require_once('templates/footer.php');
 	require_once('templates/includeJsScripts.php');
 	?>
-
 
 </body>
 

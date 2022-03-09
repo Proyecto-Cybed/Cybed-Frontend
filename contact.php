@@ -36,17 +36,19 @@
 	<!-- container -->
 	<div class="container">
 
-		<ol class="breadcrumb">
-			<li><a href="index.html">Home</a></li>
-			<li class="active">About</li>
-		</ol>
+		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+				<li class="breadcrumb-item active">Contacto</li>
+			</ol>
+		</nav>
 
 		<div class="row">
 
 			<!-- Article main content -->
 			<article class="col-sm-9 maincontent">
 				<header class="page-header">
-					<h1 class="page-title">Contact us</h1>
+					<h1 class="page-title">Contáctanos</h1>
 				</header>
 
 				<p>
@@ -112,7 +114,7 @@
 	<?php
 	require_once('templates/footer.php');
 	require_once('templates/includeJsScripts.php');
-	?>	
+	?>
 
 	<!-- Google Maps -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=&amp;sensor=false&amp;extension=.js"></script>

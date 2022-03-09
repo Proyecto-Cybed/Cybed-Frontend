@@ -35,10 +35,12 @@
 	<!-- container -->
 	<div class="container">
 
-		<ol class="breadcrumb">
-			<li><a href="index.html">Home</a></li>
-			<li class="active">User access</li>
-		</ol>
+		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+				<li class="breadcrumb-item active">Iniciar Sesión</li>
+			</ol>
+		</nav>
 
 		<div class="row">
 

@@ -30,7 +30,9 @@
 
 	<?php
 	require_once('templates/navbar.php')
+	
 	?>
+
 
 	<header id="head" class="secondary"></header>
 
@@ -56,15 +58,17 @@
 							<h3 class="thin text-center">Sign in to your account</h3>
 							<p class="text-center text-muted">Lorem ipsum dolor sit amet, <a href="signup.php">Register</a> adipisicing elit. Quo nulla quibusdam cum doloremque incidunt nemo sunt a tenetur omnis odio. </p>
 							<hr>
+							<div id="login">
 
-							<form>
+							</div>
+							<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
 								<div class="top-margin">
-									<label>Username/Email <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+									<label>Email <span class="text-danger">*</span></label>
+									<input type="text" class="form-control" id="email" >
 								</div>
 								<div class="top-margin">
 									<label>Password <span class="text-danger">*</span></label>
-									<input type="password" class="form-control">
+									<input type="password" class="form-control" id="contrasenya">
 								</div>
 
 								<hr>
@@ -74,7 +78,8 @@
 										<b><a href="">Forgot password?</a></b>
 									</div>
 									<div class="col-lg-4 text-right">
-										<button class="btn btn-action" type="submit">Sign in</button>
+										
+										<a  type="submit" class="btn btn-primary" href="javascript:loginUsuario();" role="button" name="Enviar">Sign in</a>
 									</div>
 								</div>
 							</form>
@@ -89,12 +94,24 @@
 		</div>
 	</div> <!-- /container -->
 
+	<?php
 
+if (isset($_POST['Enviar'])){
+	$_SESSION['usuario'] = $_POST['email1'];
+	echo "<script> console.log('Hola') </script>";
+
+	if (!empty($_SESSION['usuario'])) {
+		header("Location:forum.php");
+	}
+}
+	?>
 
 	<?php
+	require_once('templates/includeJsScripts.php');
 	require_once('templates/footer.php')
 	?>
 
 </body>
+<script src="assets/js/users.js"></script>
 
 </html>

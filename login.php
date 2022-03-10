@@ -24,6 +24,7 @@
 <body>
 
 	<?php
+	session_start();
 	require_once('templates/navbar.php')
 	?>
 
@@ -54,14 +55,14 @@
 							</p>
 							<hr>
 
-							<form>
+							<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 								<div class="top-margin">
-									<label>Usuario/Email <span class="text-danger">*</span></label>
-									<input type="text" class="form-control">
+									<label>Usuario <span class="text-danger">*</span></label>
+									<input type="text" class="form-control" name="usuario">
 								</div>
 								<div class="top-margin">
 									<label>Contraseña <span class="text-danger">*</span></label>
-									<input type="password" class="form-control">
+									<input type="password" class="form-control" name="password">
 								</div>
 
 								<hr>
@@ -71,7 +72,9 @@
 										<b><a href="">Olvidé mi contraseña</a></b>
 									</div>
 									<div class="col-lg-4 text-right">
-										<button class="btn btn-action" type="submit">Iniciar Sesión</button>
+										<!-- <input  type="submit" class="btn btn-primary" onclick="let f = document.getElementById('f'); if (loginUsuario()==true) { f.submit(); } return false"   role="button"  name="Enviar" >Sign in</input> -->
+										<!-- <input  type="button" class="btn btn-primary" onclick="(async ()=>{ await console.log(loginUsuario());  })() "   role="button"  name="Enviar" >Sign in</input> -->
+										<input type="submit" value="Enviar" name="Enviar">
 									</div>
 								</div>
 							</form>
@@ -89,10 +92,16 @@
 
 
 	<?php
+
+	if (isset($_POST['Enviar'])) {
+		echo '<script>alert("' . $_POST['usuario'] . '");</script>';
+	}
+
 	require_once('templates/footer.php');
 	require_once('templates/includeJsScripts.php');
 	?>
 
+	<script defer src="assets/js/users.js"></script>
 </body>
 
 </html>

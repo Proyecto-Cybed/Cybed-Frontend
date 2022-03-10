@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="Sergey Pozhilov (GetTemplate.com)">
+    <meta name="author" content="Cybed S.L.">
 
-    <title>Cybed - Registrarse</title>
+    <title>Registro - Cybed</title>
 
-    <link rel="shortcut icon" href="assets/images/gt_favicon.png">
+    <link rel="shortcut icon" href="assets/images/logo_color.png">
 
     <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">

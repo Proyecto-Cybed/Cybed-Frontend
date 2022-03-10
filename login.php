@@ -47,23 +47,25 @@
 			<!-- Article main content -->
 			<article class="col-xs-12 maincontent">
 				<header class="page-header">
-					<h1 class="page-title">Sign in</h1>
+					<h1 class="page-title">Iniciar Sesión</h1>
 				</header>
 
-				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+				<div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
 					<div class="panel panel-default">
 						<div class="panel-body">
-							<h3 class="thin text-center">Sign in to your account</h3>
-							<p class="text-center text-muted">Lorem ipsum dolor sit amet, <a href="signup.php">Register</a> adipisicing elit. Quo nulla quibusdam cum doloremque incidunt nemo sunt a tenetur omnis odio. </p>
+							<h3 class="thin text-center">Inicia sesión en tu cuenta</h3>
+							<p class="text-center text-muted">Con una cuenta en Cybed podrás acceder al <a href="#">Foro</a>.
+								<br />Si no tienes cuenta, crea una en la página de <a href="signup.php">Registro</a>.
+							</p>
 							<hr>
 
 							<form>
 								<div class="top-margin">
-									<label>Username/Email <span class="text-danger">*</span></label>
+									<label>Usuario/Email <span class="text-danger">*</span></label>
 									<input type="text" class="form-control">
 								</div>
 								<div class="top-margin">
-									<label>Password <span class="text-danger">*</span></label>
+									<label>Contraseña <span class="text-danger">*</span></label>
 									<input type="password" class="form-control">
 								</div>
 
@@ -71,10 +73,10 @@
 
 								<div class="row">
 									<div class="col-lg-8">
-										<b><a href="">Forgot password?</a></b>
+										<b><a href="">Olvidé mi contraseña</a></b>
 									</div>
 									<div class="col-lg-4 text-right">
-										<button class="btn btn-action" type="submit">Sign in</button>
+										<button class="btn btn-action" type="submit">Iniciar Sesión</button>
 									</div>
 								</div>
 							</form>

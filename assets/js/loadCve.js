@@ -10,7 +10,7 @@ $(document).ready(
     $.ajax({
       type: "GET",
       dataType: "json",
-      url: "http://localhost:8000/nvd-api",
+      url: "https://cybed-api.herokuapp.com/nvd-api",
       crossDomain: true,
 
       success: function (json) {

@@ -19,7 +19,7 @@ session_start();
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 	<script src="https://kit.fontawesome.com/79f56e797f.js" crossorigin="anonymous"></script>
-	
+
 	<!-- Custom styles for our template -->
 	<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -35,7 +35,7 @@ session_start();
 	<!-- container -->
 	<div class="container">
 
-	<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
 				<li class="breadcrumb-item active">Foro</li>
@@ -44,56 +44,56 @@ session_start();
 
 		<div class="row">
 
-			
+
 
 			<!-- Article main content -->
 			<article class="col-md-8 maincontent">
 				<header class="page-header">
 					<h1 class="page-title">Foro de usuarios</h1>
 				</header>
-				
+
 				<table class="table">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">Tema</th>
-      <th scope="col">Respuestas</th>
-      <th scope="col">Vistas</th>
-	  <th scope="col">Último mensaje</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row"><i class="fa-solid fa-file-lines"></i></i></th>
-      <td>Nombre del tema</td>
-      <td>Nº Respuestas</td>
-      <td>Nº Visitas</td>
-	  <td>por USUARIO el FECHA</td>
-    </tr>
-	<tr>
-      <th scope="row"><i class="fa-solid fa-file-lines"></i></i></th>
-      <td>Nombre del tema</td>
-      <td>Nº Respuestas</td>
-      <td>Nº Visitas</td>
-	  <td>por USUARIO el FECHA</td>
-    </tr>
-	<tr>
-      <th scope="row"><i class="fa-solid fa-file-lines"></i></i></th>
-      <td>Nombre del tema</td>
-      <td>Nº Respuestas</td>
-      <td>Nº Visitas</td>
-	  <td>por USUARIO el FECHA</td>
-    </tr>
-	<tr>
-      <th scope="row"><i class="fa-solid fa-file-lines"></i></i></th>
-      <td>Nombre del tema</td>
-      <td>Nº Respuestas</td>
-      <td>Nº Visitas</td>
-	  <td>por USUARIO el FECHA</td>
-    </tr>
-    
-  </tbody>
-</table>
+					<thead>
+						<tr>
+							<th scope="col"></th>
+							<th scope="col">Tema</th>
+							<th scope="col">Respuestas</th>
+							<th scope="col">Vistas</th>
+							<th scope="col">Último mensaje</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row"><i class="fa-solid fa-file-lines"></i></i></th>
+							<td><a href="entry.php">Nombre del tema</a></td>
+							<td>Nº Respuestas</td>
+							<td>Nº Visitas</td>
+							<td>por USUARIO el FECHA</td>
+						</tr>
+						<tr>
+							<th scope="row"><i class="fa-solid fa-file-lines"></i></i></th>
+							<td><a href="entry.php">Nombre del tema</a></td>
+							<td>Nº Respuestas</td>
+							<td>Nº Visitas</td>
+							<td>por USUARIO el FECHA</td>
+						</tr>
+						<tr>
+							<th scope="row"><i class="fa-solid fa-file-lines"></i></i></th>
+							<td><a href="entry.php">Nombre del tema</a></td>
+							<td>Nº Respuestas</td>
+							<td>Nº Visitas</td>
+							<td>por USUARIO el FECHA</td>
+						</tr>
+						<tr>
+							<th scope="row"><i class="fa-solid fa-file-lines"></i></i></th>
+							<td><a href="entry.php">Nombre del tema</a></td>
+							<td>Nº Respuestas</td>
+							<td>Nº Visitas</td>
+							<td>por USUARIO el FECHA</td>
+						</tr>
+
+					</tbody>
+				</table>
 			</article>
 			<!-- /Article -->
 
@@ -132,4 +132,5 @@ session_start();
 	require_once('templates/includeJsScripts.php');
 	?>
 </body>
+
 </html>

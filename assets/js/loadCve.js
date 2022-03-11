@@ -1,6 +1,5 @@
 $(document).ready(
   $(function () {
-    
     const options = {
       weekday: "long",
       year: "numeric",
@@ -47,6 +46,16 @@ $(document).ready(
               "</div>"
           );
         }
+      },
+      error: function (xhr, status) {
+        $("#cve").append(
+          '<div class="card text-dark bg-info mb-3">' +
+            '<div class="card-body">' +
+            '<h5 class="card-title">Info de CVE no disponible en este momento</h5>' +
+            '<p class="card-text">Inténtelo de nuevo más tarde</p>' +
+            "</div>" +
+            "</div>"
+        );
       },
     });
   })

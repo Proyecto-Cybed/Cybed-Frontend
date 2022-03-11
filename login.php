@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('CRUDUser.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,26 +28,9 @@ session_start();
 <body>
 
 	<?php
-	try {
-		$bd = new PDO('mysql:host=localhost;dbname=cybed;charset=utf8', 'cybed', 'cybed');
-	} catch (PDOException $e) {
-		exit($e->getMessage());
-	}
 	$error = null;
 	if (isset($_POST['Enviar'])) {
-		$sql = "SELECT usuario, nombre, email, password FROM usuarios WHERE usuario = :usuario";
-		$consulta = $bd->prepare($sql);
-		$consulta->execute(["usuario" => $_POST['usuario']]);
-		$usuario = $consulta->fetch();
-
-
-		if (!empty($usuario) and password_verify($_POST['password'], $usuario['password'])) {
-			$_SESSION['usuario'] = $usuario['usuario'];
-			$_SESSION['nombre'] = $usuario['nombre'];
-			$_SESSION['email'] = $usuario['email'];
-		} else {
-			$error = 'Usuario o clave incorrectos';
-		}
+		login();
 	}
 	require_once('templates/navbar.php');
 	?>

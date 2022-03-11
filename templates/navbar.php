@@ -15,7 +15,13 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
 				<li class="nav-item"><a class="nav-link <?= ($activePage == 'cve') ? 'active' : ''; ?>" href="cve.php">Vulnerabilidades</a></li>
 				<li class="nav-item"><a class="nav-link <?= ($activePage == 'forum') ? 'active' : ''; ?>" href="forum.php">Foro</a></li>
 				<li class="nav-item"><a class="nav-link <?= ($activePage == 'contact') ? 'active' : ''; ?>" href="contact.php">Contacto</a></li>
-				<li class="nav-item "><a class="btn btn-primary btn-sm mt-0 <?= ($activePage == 'login' || $activePage == 'signup') ? 'active' : ''; ?>" href="login.php"> Iniciar Sesión / Inscribirse</a></li>
+				<?php
+				if (isset($_SESSION['usuario'])) {
+					echo '<li class="nav-item "><a class="btn btn-primary btn-sm mt-0" href="logout.php"> Cerrar Sesión</a></li>';
+				} else {
+					echo '<li class="nav-item "><a class="btn btn-primary btn-sm mt-0" href="login.php"> Iniciar Sesión / Inscribirse</a></li>';
+				}
+				?>
 			</ul>
 		</div>
 	</div>

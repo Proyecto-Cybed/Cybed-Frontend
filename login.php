@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +27,6 @@
 <body>
 
 	<?php
-	session_start();
 	try {
 		$bd = new PDO('mysql:host=localhost;dbname=cybed;charset=utf8', 'cybed', 'cybed');
 	} catch (PDOException $e) {

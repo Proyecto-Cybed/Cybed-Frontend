@@ -1,5 +1,12 @@
 # Cybed-Frontend
 
+## Requisitos Diseño de Interfaces Web
+
+- [X] Diseño de la web.
+- [X] Crear un logo para la web.
+- [x] Crear una licencia Creative Commons para la web y el logo.
+- [ ] Usar imágenes/logos cuyas licencias lo permitan. (Tendréis que facilitarme un archivo que incluya todas las imágenes usadas junto con la URL de origen).
+
 ## Requisitos Desarrollo en Entorno Servidor
 
 - [X] __RA5__: Implementado con Symfony

@@ -35,7 +35,8 @@ session_start();
 		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
-				<li class="breadcrumb-item active">Vulnerabilidades</li>
+				<li class="breadcrumb-item"><a href="forum.php">Foro</a></li>
+				<li class="breadcrumb-item active">ESTA ENTRADA</li>
 			</ol>
 		</nav>
 
@@ -43,11 +44,51 @@ session_start();
 
 			<!-- Article main content -->
 			<article class="col-sm-10">
-				<header class="page-header">
-					<h1 class="page-title">Vulnerabilidades y Exposiciones Comunes (CVE)</h1>
-				</header>
+				<div class="entrada" id="idEntrada">
+					<div class="h2" id="titulo">Titulo</div>
+					<div class="row">
+						<div class="col-md-8">
+							<div id="contenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iusto suscipit blanditiis ipsum sit voluptatem provident repellendus, asperiores, praesentium placeat reprehenderit, voluptate minima labore exercitationem eaque non amet sunt nihil!</div>
+							<div id="fecha">
+								<p class="text-muted">2015-03-25T12:00:00Z</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div id="usuario">
+								<p class="h5" id="nombreUsuario">Usuario Autor</p>
+							</div>
+						</div>
+					</div>
+				</div>
 
-				<div id="cve"></div>
+				<div id="mensajes">
+					<div class="row" id="idMensaje">
+						<div class="col-md-8">
+							<div class="contenidoMensaje">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iusto suscipit blanditiis ipsum sit voluptatem provident repellendus, asperiores, praesentium placeat reprehenderit, voluptate minima labore exercitationem eaque non amet sunt nihil!</div>
+							<div class="fechaMensaje">
+								<p class="text-muted">2015-03-25T12:00:00Z</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="usuarioMensaje">
+								<p class="h5" class="nombreUsuarioMensaje">Usuario Mensaje</p>
+							</div>
+						</div>
+					</div>
+					<div class="row" id="idMensaje">
+						<div class="col-md-8">
+							<div class="contenidoMensaje">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iusto suscipit blanditiis ipsum sit voluptatem provident repellendus, asperiores, praesentium placeat reprehenderit, voluptate minima labore exercitationem eaque non amet sunt nihil!</div>
+							<div class="fechaMensaje">
+								<p class="text-muted">2015-03-25T12:00:00Z</p>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="usuarioMensaje">
+								<p class="h5" class="nombreUsuarioMensaje">Usuario Mensaje</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</article>
 			<!-- /Article -->
 
@@ -77,6 +118,5 @@ session_start();
 	?>
 
 </body>
-<script src="assets/js/loadCve.js"></script>
 
 </html>

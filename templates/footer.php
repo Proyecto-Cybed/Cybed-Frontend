@@ -34,6 +34,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
                         <p>Eius consequatur nihil quibusdam! Laborum, rerum, quis, inventore ipsa autem repellat provident assumenda labore soluta minima alias temporibus facere distinctio quas adipisci nam sunt explicabo officia tenetur at ea quos doloribus dolorum voluptate reprehenderit architecto sint libero illo et hic.</p>
                     </div>
+                    <div><img src="assets/images/logo_color.png" width="80px" alt="Cybed logo"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/StillImage" property="dct:title" rel="dct:type">Logo Cybed</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="github.com/deg42" property="cc:attributionName" rel="cc:attributionURL">Juan Antonio González Rivera</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Reconocimiento-NoComercial 4.0 Internacional License</a>.</div>
                 </div>
 
             </div> <!-- /row of widgets -->
@@ -42,8 +43,7 @@
 
     <div class="footer2">
         <div class="container">
-            <div class="row">
-
+            <div class="row align-items-center">
                 <div class="col-md-6 widget">
                     <div class="widget-body">
                         <p class="simplenav">
@@ -51,7 +51,7 @@
                             <a href="cve.php">Vulnerabilidades</a> |
                             <a href="forum.php">Foro</a> |
                             <a href="contact.php">Contacto</a> |
-                            <b><a href="singup.php">Inscribirse</a></b>
+                            <b><a href="signup.php">Inscribirse</a></b>
                         </p>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                 <div class="col-md-6 widget">
                     <div class="widget-body">
                         <p class="text-right">
-                            Copyright &copy; 2022, Your name. Designed by <a href="http://gettemplate.com/" rel="designer">gettemplate</a>
+                            Copyright &copy; 2022, Cybed. Designed by <a href="http://gettemplate.com/" rel="designer">gettemplate</a>. Product of <a href="https://pozhilov.com/">Sergey Pozhilov</a>. <a rel="license" href="//creativecommons.org/licenses/by/3.0/" class="license-button"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by/3.0/88x31.png"></a>
                         </p>
                     </div>
                 </div>

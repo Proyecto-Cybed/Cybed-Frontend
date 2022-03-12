@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,11 +8,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="Sergey Pozhilov (GetTemplate.com)">
+    <meta name="author" content="Cybed S.L.">
 
-    <title>Cybed - Registrarse</title>
+    <title>Registro - Cybed</title>
 
-    <link rel="shortcut icon" href="assets/images/gt_favicon.png">
+    <link rel="shortcut icon" href="assets/images/logo_color.png">
 
     <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -19,12 +22,6 @@
     <link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen">
     <link rel="stylesheet" href="assets/css/main.css">
     
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-	<script src="assets/js/html5shiv.js"></script>
-	<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
 </head>
 
 <body>
@@ -32,15 +29,15 @@
     require_once('templates/navbar.php')
     ?>
 
-    <header id="head" class="secondary"></header>
-
     <!-- container -->
     <div class="container">
 
-        <ol class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li class="active">Registration</li>
-        </ol>
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+				<li class="breadcrumb-item active">Registrarse</li>
+			</ol>
+		</nav>
 
         <div class="row">
 
@@ -53,7 +50,7 @@
 
                 </div>
 
-                <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <h3 class="thin text-center">Registrar una nueva cuenta</h3>
@@ -90,7 +87,7 @@
                                         <span class="help-block" id="error"></span>
                                     </div>
                                     <div class="form-group col-sm-6">
-                                        <label>Confirmar Contraseña <span class="text-danger">*</span></label>
+                                        <label>Repetir Contraseña <span class="text-danger">*</span></label>
                                         <input type="password" class="form-control" id="contrasenya2" name="contrasenya2">
                                         <span class="help-block" id="error"></span>
                                     </div>
@@ -99,18 +96,16 @@
                                 <hr>
 
                                 <div class="form-group row">
-                                    <div class="col-lg-8">
                                         <label class="checkbox">
                                             <input type="checkbox" name="check">
                                             He leído los términos y condiciones <a href="page_terms.html">Términos y condiciones</a>
                                         </label>
                                         <span class="help-block" id="error"></span>
-                                    </div>
                                 </div>
 
                             </div> 
                             <div class="form-footer">
-                                <div class="col-lg-4 text-right">
+                                <div class="col-lg-4 offset-lg-9 text-right mt-3">  
                                     <button type="submit" class="btn btn-primary">Registrarse</button>
                                 </div>
                             </div>

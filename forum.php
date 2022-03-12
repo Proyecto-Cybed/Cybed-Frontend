@@ -58,39 +58,12 @@ session_start();
 							<th scope="col"></th>
 							<th scope="col">Tema</th>
 							<th scope="col">Respuestas</th>
-							<th scope="col">Vistas</th>
+							<th scope="col">Author</th>
 							<th scope="col">Último mensaje</th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
-							<th scope="row"><i class="fa-solid fa-file-lines"></i></i></th>
-							<td><a href="entry.php">Nombre del tema</a></td>
-							<td>Nº Respuestas</td>
-							<td>Nº Visitas</td>
-							<td>por USUARIO el FECHA</td>
-						</tr>
-						<tr>
-							<th scope="row"><i class="fa-solid fa-file-lines"></i></i></th>
-							<td><a href="entry.php">Nombre del tema</a></td>
-							<td>Nº Respuestas</td>
-							<td>Nº Visitas</td>
-							<td>por USUARIO el FECHA</td>
-						</tr>
-						<tr>
-							<th scope="row"><i class="fa-solid fa-file-lines"></i></i></th>
-							<td><a href="entry.php">Nombre del tema</a></td>
-							<td>Nº Respuestas</td>
-							<td>Nº Visitas</td>
-							<td>por USUARIO el FECHA</td>
-						</tr>
-						<tr>
-							<th scope="row"><i class="fa-solid fa-file-lines"></i></i></th>
-							<td><a href="entry.php">Nombre del tema</a></td>
-							<td>Nº Respuestas</td>
-							<td>Nº Visitas</td>
-							<td>por USUARIO el FECHA</td>
-						</tr>
+					<tbody id="entries">
+						
 
 					</tbody>
 				</table>
@@ -125,7 +98,7 @@ session_start();
 
 		</div>
 	</div> <!-- /container -->
-
+	<script defer src="assets/js/entries.js"></script>
 
 	<?php
 	require_once('templates/footer.php');

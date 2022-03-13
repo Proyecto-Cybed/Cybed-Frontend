@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('CRUDUser.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +58,7 @@ session_start();
                             <p class="text-center text-muted">Si por el contrario ya tienen una cuenta, acuda a <a href="login.php">Iniciar Sesión</a></p>
                             <hr>
 
-                            <form role="form" id="register-form"> 
+                            <form role="form" id="register-form" method="POST"> 
 
                             <div class="form-body">
                                 <div class="form-group top-margin">
@@ -106,7 +107,7 @@ session_start();
                             </div> 
                             <div class="form-footer">
                                 <div class="col-lg-4 offset-lg-9 text-right mt-3">  
-                                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                                    <button type="submit" class="btn btn-primary" name="Enviar">Registrarse</button>
                                 </div>
                             </div>
  
@@ -123,8 +124,19 @@ session_start();
     </div> <!-- /container -->
 
     <?php
+    if (isset($_POST["Enviar"])) {
+        echo '<script>';
+        echo "console.log('Hola')";
+        echo '</script>';
+        insertar();
+    } else {
+        echo '<script>';
+        echo "console.log('No Hola')";
+        echo '</script>';
+    }
     require_once('templates/footer.php');
     require_once('templates/includeJsScripts.php');
+    
     ?>
 
 </body>

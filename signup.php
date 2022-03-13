@@ -125,14 +125,8 @@ require_once('CRUDUser.php');
 
     <?php
     if (isset($_POST["Enviar"])) {
-        echo '<script>';
-        echo "console.log('Hola')";
-        echo '</script>';
+  
         insertar();
-    } else {
-        echo '<script>';
-        echo "console.log('No Hola')";
-        echo '</script>';
     }
     require_once('templates/footer.php');
     require_once('templates/includeJsScripts.php');

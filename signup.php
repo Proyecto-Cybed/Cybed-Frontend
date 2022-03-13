@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('CRUDUser.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +22,7 @@ session_start();
     <!-- Custom styles for our template -->
     <link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen">
     <link rel="stylesheet" href="assets/css/main.css">
-    
+
 </head>
 
 <body>
@@ -32,12 +33,12 @@ session_start();
     <!-- container -->
     <div class="container">
 
-    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
-				<li class="breadcrumb-item active">Registrarse</li>
-			</ol>
-		</nav>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+                <li class="breadcrumb-item active">Registrarse</li>
+            </ol>
+        </nav>
 
         <div class="row">
 
@@ -57,59 +58,59 @@ session_start();
                             <p class="text-center text-muted">Si por el contrario ya tienen una cuenta, acuda a <a href="login.php">Iniciar Sesión</a></p>
                             <hr>
 
-                            <form role="form" id="register-form"> 
+                            <form role="form" id="register-form" method="POST">
 
-                            <div class="form-body">
-                                <div class="form-group top-margin">
+                                <div class="form-body">
+                                    <div class="form-group top-margin">
                                         <label for="validacionNombreUsuario" class="form-label">Nombre de usuario <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="usuario" name="usuario">
                                         <span class="help-block" id="error"></span>
-                                </div>
-                                <div class="form-group top-margin">
-                                    <label for="validacionNombre" class="form-label">Nombre <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="nombre" name="nombre">
-                                    <span class="help-block" id="error"></span>
-                                </div>
-                                <div class="form-group top-margin">
-                                    <label>Apellidos <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="apellidos" name="apellidos"> 
-                                    <span class="help-block" id="error"></span>
-                                </div>
-                                <div class="form-group top-margin">
-                                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-                                    <input type="email" class="form-control" id="email" id="email" name="email">
-                                    <span class="help-block" id="error"></span>
-                                </div>
-                                <div class="form-group row top-margin">
-                                    <div class="col-sm-6">
-                                        <label>Contraseña <span class="text-danger">*</span></label>
-                                        <input type="password" class="form-control" id="contrasenya1" name="contrasenya1">
+                                    </div>
+                                    <div class="form-group top-margin">
+                                        <label for="validacionNombre" class="form-label">Nombre <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="nombre" name="nombre">
                                         <span class="help-block" id="error"></span>
                                     </div>
-                                    <div class="form-group col-sm-6">
-                                        <label>Repetir Contraseña <span class="text-danger">*</span></label>
-                                        <input type="password" class="form-control" id="contrasenya2" name="contrasenya2">
+                                    <div class="form-group top-margin">
+                                        <label>Apellidos <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="apellidos" name="apellidos">
                                         <span class="help-block" id="error"></span>
                                     </div>
-                                </div>
+                                    <div class="form-group top-margin">
+                                        <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" id="email" id="email" name="email">
+                                        <span class="help-block" id="error"></span>
+                                    </div>
+                                    <div class="form-group row top-margin">
+                                        <div class="col-sm-6">
+                                            <label>Contraseña <span class="text-danger">*</span></label>
+                                            <input type="password" class="form-control" id="contrasenya1" name="contrasenya1">
+                                            <span class="help-block" id="error"></span>
+                                        </div>
+                                        <div class="form-group col-sm-6">
+                                            <label>Repetir Contraseña <span class="text-danger">*</span></label>
+                                            <input type="password" class="form-control" id="contrasenya2" name="contrasenya2">
+                                            <span class="help-block" id="error"></span>
+                                        </div>
+                                    </div>
 
-                                <hr>
+                                    <hr>
 
-                                <div class="form-group row">
+                                    <div class="form-group row">
                                         <label class="checkbox">
                                             <input type="checkbox" name="check">
                                             He leído los términos y condiciones <a href="page_terms.html">Términos y condiciones</a>
                                         </label>
                                         <span class="help-block" id="error"></span>
+                                    </div>
+
+                                </div>
+                                <div class="form-footer">
+                                    <div class="col-lg-4 offset-lg-9 text-right mt-3">
+                                        <button type="submit" class="btn btn-primary" name="Enviar">Registrarse</button>
+                                    </div>
                                 </div>
 
-                            </div> 
-                            <div class="form-footer">
-                                <div class="col-lg-4 offset-lg-9 text-right mt-3">  
-                                    <button type="submit" class="btn btn-primary">Registrarse</button>
-                                </div>
-                            </div>
- 
                             </form>
                         </div>
                     </div>
@@ -123,10 +124,16 @@ session_start();
     </div> <!-- /container -->
 
     <?php
+    if (isset($_POST["Enviar"])) {
+
+        insertar();
+    }
     require_once('templates/footer.php');
     require_once('templates/includeJsScripts.php');
+
     ?>
 
 </body>
 <script src="assets/js/users.js"></script>
+
 </html>

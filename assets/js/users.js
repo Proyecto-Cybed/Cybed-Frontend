@@ -128,84 +128,9 @@ $('document').ready(function() {
 
         },
         submitHandler: function(form) {
-            insertar();
+            formulario.submit();
             formulario.reset();
         }
     });
+
 })
-
-
-function insertar() {
-
-    var usuario = new FormData();
-
-    var contrasenya1 = document.getElementById("contrasenya1").value;
-    var contrasenya2 = document.getElementById("contrasenya2").value;
-
-    if (contrasenya1 === contrasenya2) {
-        usuario.append("nombre", document.getElementById("nombre").value);
-        usuario.append("usuario", document.getElementById("usuario").value);
-        usuario.append("apellidos", document.getElementById("apellidos").value);
-        usuario.append("email", document.getElementById("email").value);
-        usuario.append("password", contrasenya1);
-
-        fetch("http://localhost:8000/api/usuarios/", {
-                method: "POST", // Indicar método POST
-                body: usuario, // Con cuerpo
-            })
-            .then((result) => {
-                document.getElementById('usuarioInsertado').innerHTML = '<p class="text-success"> Usuario registrado con éxito </p>';
-            })
-
-        // (D) SERVER RESPONSE
-        .then((response) => {
-            console.log(response);
-        })
-
-        // (E) HANDLE ERRORS - OPTIONAL
-        .catch((error) => {
-            console.log(error);
-        });
-    }
-
-
-}
-
-
-function loginUsuario() {
-
-    var usuario = new FormData();
-
-    var email = document.getElementById("email").value;
-    var contrasenya = document.getElementById("contrasenya").value;
-
-    usuario.append("email", email);
-    usuario.append("password", contrasenya);
-
-
-    fetch("http://localhost:8000/api/login/usuarios/", {
-            method: "POST", // Indicar método POST
-            body: usuario, // Con cuerpo
-        })
-        .then((result) => {
-            console.log(result.status);
-            if (result.status == 201) {
-                document.getElementById('login').innerHTML = ' <input  class="form-control" id="email1" name="email1" value="" type="hidden"/>';
-
-                $('#email1').val(email);
-
-
-            }
-        })
-
-    // (D) SERVER RESPONSE
-    .then((response) => {
-        console.log(response);
-    })
-
-    // (E) HANDLE ERRORS - OPTIONAL
-    .catch((error) => {
-        console.log(error);
-    });
-
-}

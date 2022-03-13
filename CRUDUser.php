@@ -16,3 +16,15 @@ function login()
         return $error = 'Usuario o clave incorrectos';
     }
 }
+
+
+function insertar()
+{
+    require_once('bd.php');
+    $sql = "INSERT INTO usuarios(usuario,nombre,apellidos, email, password) VALUES (:usuario,:nombre,:apellidos,:email,:password)";
+    $consulta = $bd->prepare($sql);
+    $consulta->execute(["usuario" => $_POST['usuario'], "nombre" => $_POST['nombre'], "apellidos" => $_POST['apellidos'], "email" => $_POST['email'], "password" => password_hash($_POST['contrasenya1'], PASSWORD_DEFAULT)]);
+}
+
+
+

@@ -28,12 +28,14 @@ require_once('CRUDUser.php');
 <body>
 
 	<?php
+
 	$error = null;
 	if (isset($_POST['Enviar'])) {
 		login();
 	}
 	require_once('templates/navbar.php');
 	?>
+
 
 	<!-- container -->
 	<div class="container">
@@ -61,6 +63,8 @@ require_once('CRUDUser.php');
 								<br />Si no tienes cuenta, crea una en la página de <a href="signup.php">Registro</a>.
 							</p>
 							<hr>
+							<div id="login">
+
 
 							<?php
 							if (isset($_SESSION['usuario'])) {
@@ -79,6 +83,7 @@ require_once('CRUDUser.php');
 									<div class="top-margin">
 										<label>Contraseña <span class="text-danger">*</span></label>
 										<input type="password" class="form-control" name="password">
+
 									</div>
 
 									<hr>
@@ -107,12 +112,15 @@ require_once('CRUDUser.php');
 		</div>
 	</div> <!-- /container -->
 
+
 	<?php
 	require_once('templates/footer.php');
 	require_once('templates/includeJsScripts.php');
+
 	?>
 
 
 </body>
+<script src="assets/js/users.js"></script>
 
 </html>

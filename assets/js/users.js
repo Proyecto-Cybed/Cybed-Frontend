@@ -170,3 +170,42 @@ function insertar() {
 
 
 }
+
+
+function loginUsuario() {
+
+    var usuario = new FormData();
+
+    var email = document.getElementById("email").value;
+    var contrasenya = document.getElementById("contrasenya").value;
+
+    usuario.append("email", email);
+    usuario.append("password", contrasenya);
+
+
+    fetch("http://localhost:8000/api/login/usuarios/", {
+            method: "POST", // Indicar método POST
+            body: usuario, // Con cuerpo
+        })
+        .then((result) => {
+            console.log(result.status);
+            if (result.status == 201) {
+                document.getElementById('login').innerHTML = ' <input  class="form-control" id="email1" name="email1" value="" type="hidden"/>';
+
+                $('#email1').val(email);
+
+
+            }
+        })
+
+    // (D) SERVER RESPONSE
+    .then((response) => {
+        console.log(response);
+    })
+
+    // (E) HANDLE ERRORS - OPTIONAL
+    .catch((error) => {
+        console.log(error);
+    });
+
+}

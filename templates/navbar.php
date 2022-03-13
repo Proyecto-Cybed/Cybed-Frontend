@@ -1,6 +1,8 @@
 <?php
 $activePage = basename($_SERVER['PHP_SELF'], ".php");
+
 ?>
+
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -22,6 +24,7 @@ $activePage = basename($_SERVER['PHP_SELF'], ".php");
 					echo '<li class="nav-item "><a class="btn btn-primary btn-sm mt-0" href="login.php"> Iniciar Sesión / Inscribirse</a></li>';
 				}
 				?>
+
 			</ul>
 		</div>
 	</div>

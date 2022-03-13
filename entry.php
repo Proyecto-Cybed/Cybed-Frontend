@@ -44,50 +44,23 @@ session_start();
 
 			<!-- Article main content -->
 			<article class="col-sm-10">
-				<div class="entrada" id="idEntrada">
-					<div class="h2" id="titulo">Titulo</div>
+				<div class="entrada">
+					<div class="h2" id="titulo"></div>
 					<div class="row">
 						<div class="col-md-8">
-							<div id="contenido">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iusto suscipit blanditiis ipsum sit voluptatem provident repellendus, asperiores, praesentium placeat reprehenderit, voluptate minima labore exercitationem eaque non amet sunt nihil!</div>
-							<div id="fecha">
-								<p class="text-muted">2015-03-25T12:00:00Z</p>
-							</div>
+							<div id="contenido"></div>
+								<p id="fecha" class="text-muted"></p>
 						</div>
 						<div class="col-md-4">
 							<div id="usuario">
-								<p class="h5" id="nombreUsuario">Usuario Autor</p>
+								<p class="h5" id="nombreUsuario"></p>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<div id="mensajes">
-					<div class="row" id="idMensaje">
-						<div class="col-md-8">
-							<div class="contenidoMensaje">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iusto suscipit blanditiis ipsum sit voluptatem provident repellendus, asperiores, praesentium placeat reprehenderit, voluptate minima labore exercitationem eaque non amet sunt nihil!</div>
-							<div class="fechaMensaje">
-								<p class="text-muted">2015-03-25T12:00:00Z</p>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="usuarioMensaje">
-								<p class="h5" class="nombreUsuarioMensaje">Usuario Mensaje</p>
-							</div>
-						</div>
-					</div>
-					<div class="row" id="idMensaje">
-						<div class="col-md-8">
-							<div class="contenidoMensaje">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iusto suscipit blanditiis ipsum sit voluptatem provident repellendus, asperiores, praesentium placeat reprehenderit, voluptate minima labore exercitationem eaque non amet sunt nihil!</div>
-							<div class="fechaMensaje">
-								<p class="text-muted">2015-03-25T12:00:00Z</p>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="usuarioMensaje">
-								<p class="h5" class="nombreUsuarioMensaje">Usuario Mensaje</p>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</article>
 			<!-- /Article -->
@@ -111,6 +84,8 @@ session_start();
 
 		</div>
 	</div> <!-- /container -->
+
+	<script defer src="assets/js/entry.js"></script>
 
 	<?php
 	require_once('templates/footer.php');

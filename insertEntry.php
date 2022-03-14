@@ -100,7 +100,6 @@ session_start();
 
 		</div>
 	</div> <!-- /container -->
-	<script defer src="assets/js/entries.js"></script>
     <script defer src="assets/js/insertEntry.js"></script>
 
 

@@ -22,7 +22,7 @@
                         <p class="follow-me-icons">
                             <a href=""><i class="fa fa-twitter fa-2"></i></a>
                             <a href=""><i class="fa fa-dribbble fa-2"></i></a>
-                            <a href=""><i class="fa fa-github fa-2"></i></a>
+                            <a href="https://github.com/Proyecto-Cybed"><i class="fa fa-github fa-2"></i></a>
                             <a href=""><i class="fa fa-facebook fa-2"></i></a>
                         </p>
                     </div>

@@ -29,7 +29,10 @@ session_start();
 <body>
 
 	<?php
-	require_once('templates/navbar.php')
+	require_once('templates/navbar.php');
+
+	if (!empty($_SESSION['usuario'])){
+
 	?>
 
 	<!-- container -->
@@ -101,6 +104,9 @@ session_start();
 	<script defer src="assets/js/entries.js"></script>
 
 	<?php
+	} else {
+		header("Location:login.php");
+	}
 	require_once('templates/footer.php');
 	require_once('templates/includeJsScripts.php');
 	?>

@@ -86,6 +86,7 @@ session_start();
 	</div> <!-- /container -->
 
 	<script defer src="assets/js/entry.js"></script>
+	
 
 	<?php
 	require_once('templates/footer.php');

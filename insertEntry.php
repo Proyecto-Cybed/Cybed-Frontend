@@ -52,24 +52,23 @@ session_start();
 			<!-- Article main content -->
 			<article class="col-md-8 maincontent">
 				<header class="page-header">
-					<h1 class="page-title">Foro de usuarios</h1>
+					<h1 class="page-title">Crear Entrada</h1>
 				</header>
+                    <form id="entry" method="post">
+                        <div class="mb-3"> 
+                          <label for="titulo" class="form-label">Título</label>
+                          <input type="text" class="form-control" name="titulo" id="titulo" aria-describedby="Titulo" >
+                        </div>
+                        <div class="mb-3"> 
+                          <label for="contenido" class="form-label">Contenido</label>
+                          <input type="text" class="form-control" name="contenido" id="contenido" aria-describedby="Contenido">
+                        </div>
+                        <input type="hidden" class="form-control" name="usuario" id="usuario" aria-describedby="usuario" value="<?php echo $_SESSION['usuario'];?>">
+                        <a class="btn btn-primary" href="javascript:insertEntry();" role="button">Crear entrada</a>
+                    </form>
 
-				<table class="table">
-					<thead>
-						<tr>
-							<th scope="col"></th>
-							<th scope="col">Tema</th>
-							<th scope="col">Respuestas</th>
-							<th scope="col">Author</th>
-							<th scope="col">Último mensaje</th>
-						</tr>
-					</thead>
-					<tbody id="entries">
-						
 
-					</tbody>
-				</table>
+				
 			</article>
 			<!-- /Article -->
 
@@ -78,7 +77,8 @@ session_start();
 
 				<div class="row widget">
 					<div class="col-xs-12">
-					<a class="btn btn-primary" href="insertEntry.php" role="button">Nueva entrada</a>
+						<h4>Lorem </h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, ratione delectus reiciendis nulla nisi pariatur molestias animi eos repellat? Vel.</p>
 					</div>
 				</div>
 				<div class="row widget">
@@ -101,8 +101,12 @@ session_start();
 		</div>
 	</div> <!-- /container -->
 	<script defer src="assets/js/entries.js"></script>
+    <script defer src="assets/js/insertEntry.js"></script>
 
-	<?php
+
+
+	<?php    
+
 	} else {
 		header("Location:login.php");
 	}

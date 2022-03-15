@@ -62,6 +62,19 @@ session_start();
 				<div id="mensajes">
 					
 				</div>
+				<div id="comentario">
+					<form id="comment" method="post">
+						<div class="form-outline">
+							<textarea class="form-control"  name="textAreaComentario"  id="textAreaComentario" rows="5"></textarea>
+							
+						</div>
+						<input type="hidden" class="form-control" name="idEntrada" id="idEntrada" aria-describedby="idEntrada" value="<?php echo $_GET['id'];?>">
+						<input type="hidden" class="form-control" name="Usuario" id="Usuario" aria-describedby="nombreUsuario" value="<?php echo $_SESSION['usuario'];?>">
+					</br>
+                        <a class="btn btn-primary" href="javascript:insertComment();" role="button">Comentar</a>
+					</form>
+
+				</div>
 			</article>
 			<!-- /Article -->
 
@@ -86,6 +99,7 @@ session_start();
 	</div> <!-- /container -->
 
 	<script defer src="assets/js/entry.js"></script>
+	<script defer src="assets/js/insertComment.js"></script>
 	
 
 	<?php

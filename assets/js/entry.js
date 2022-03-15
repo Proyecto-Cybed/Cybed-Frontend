@@ -8,7 +8,7 @@ console.log(id);
 $.ajax({
     type: "GET",
     dataType: "json",
-    url: "http://cybed-api.herokuapp.com/api/entradas/" + id + "",
+    url: "https://cybed-api.herokuapp.com/api/entradas/" + id + "",
     crossDomain: true,
 
     success: function(json) {

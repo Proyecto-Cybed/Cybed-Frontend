@@ -14,7 +14,7 @@ function insertComment() {
 
 
 
-    fetch("http://cybed-api.herokuapp.com/api/mensajes/", {
+    fetch("https://cybed-api.herokuapp.com/api/mensajes/", {
             method: "POST", // Indicar método POST
             body: comentario, // Con cuerpo
         })

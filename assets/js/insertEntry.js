@@ -11,7 +11,7 @@ function insertEntry() {
     entrada.append("usuario", usuario);
 
 
-    fetch("http://cybed-api.herokuapp.com/api/entradas/", {
+    fetch("https://cybed-api.herokuapp.com/api/entradas/", {
             method: "POST", // Indicar método POST
             body: entrada, // Con cuerpo
         })
